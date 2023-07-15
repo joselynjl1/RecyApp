@@ -12,62 +12,101 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Registrar"
+            android:textStyle="bold"
+            android:textSize="25sp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="155dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/registro_usuario"></ImageView>
+                android:layout_height="130dp"
+                android:src="@drawable/registra">
+            </ImageView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Material"
+                android:textColor="#000000"
+                android:textSize="18sp"></TextView>
+
+            <Spinner
+                android:id="@+id/SpinnerRegistrar"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape_inputregistrar"
+                tools:ignore="SpeakableTextPresentCheck">
+
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#000000"
+                android:textSize="18sp"></TextView>
 
             <EditText
                 android:id="@+id/ETUsuario"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape_inputregistrar"
+                android:hint="  Ingrese el peso"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:ems="10"
-                android:hint="Ingrese Usuario"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:layout_marginBottom="15dp"/>
+                android:text="Ganará"
+                android:textColor="#000000"
+                android:textSize="18sp"></TextView>
+
             <EditText
                 android:id="@+id/ETFullName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:ems="10"
-                android:hint="Ingrese nombre completo"
+                android:hint="  0 puntos"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:layout_marginBottom="15dp"/>
+                android:background="@drawable/shape_inputregistrar"/>
 
             <Button
                 android:id="@+id/BtnEnviar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Enviar" />
-
-            <EditText
-                android:id="@+id/editTextNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
-
-
+                android:layout_marginTop="10dp"
+                android:text="Enviar"
+                android:background="@color/purple_200"/>
         </LinearLayout>
     </LinearLayout>
 

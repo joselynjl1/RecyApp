@@ -8,7 +8,7 @@
     tools:context=".UI.Activities.MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout_main"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
@@ -25,7 +25,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
@@ -34,7 +34,18 @@
                 android:text="@string/main_menu"
                 android:textColor="#616161"
                 android:textSize="30sp"></TextView>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_logout_24"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="15dp">
+
+            </ImageView>
         </LinearLayout>
+
+
     </LinearLayout>
 
     <RelativeLayout
@@ -42,7 +53,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="1dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,15 +69,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/TVUsername"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="63dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="Usuario"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"></TextView>
 
             </LinearLayout>
@@ -82,7 +93,7 @@
                 android:gravity="center"
                 android:text="5000"
                 android:textColor="@color/black"
-                android:textSize="15sp"></TextView>
+                android:textSize="30sp"></TextView>
 
             <TextView
                 android:layout_width="match_parent"
@@ -91,7 +102,7 @@
                 android:text="Puntos"
                 android:textColor="@color/black"
                 android:layout_marginBottom="10dp"
-                android:textSize="15sp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -103,15 +114,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="50dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="10dp">
 
                     <Button
                         android:id="@+id/BtnRecicla"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -120,10 +133,11 @@
 
                     <ImageView
                         android:id="@+id/IVRecicla"
-                        android:layout_width="125dp"
+                        android:layout_width="140dp"
                         android:scaleType="centerCrop"
                         android:layout_height="100dp"
-                        android:src="@drawable/recicla"></ImageView>
+                        android:src="@drawable/recicla">
+                    </ImageView>
                 </LinearLayout>
 
                 <LinearLayout
@@ -139,18 +153,18 @@
 
                     <ImageView
                         android:id="@+id/IVRegistra"
-                        android:layout_width="125dp"
+                        android:layout_width="140dp"
                         android:scaleType="centerCrop"
                         android:layout_height="100dp"
                         android:src="@drawable/registra"></ImageView>
 
                     <Button
                         android:id="@+id/BtnRegistra"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:background="@drawable/shape_button_menu"
+                        android:background="@drawable/shape_button_menu_right"
                         android:text="Registra"></Button>
 
                 </LinearLayout>
@@ -168,7 +182,7 @@
 
                     <Button
                         android:id="@+id/BtnCanjea"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -177,7 +191,7 @@
 
                     <ImageView
                         android:id="@+id/IVCanjea"
-                        android:layout_width="125dp"
+                        android:layout_width="140dp"
                         android:scaleType="centerCrop"
                         android:layout_height="100dp"
                         android:src="@drawable/canjea"></ImageView>
@@ -191,7 +205,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/teal_700"
+            android:background="@color/cardview_dark_background"
             app:menu="@menu/bnav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </RelativeLayout>

@@ -22,84 +22,160 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/editar_user"></ImageView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="22sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:text="Editar Usuario">
-            </TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp">
-            <EditText
-                android:id="@+id/EditUsuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:ems="10"
-                android:hint="Editar Usuario"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:layout_marginBottom="15dp"/>
-            <EditText
-                android:id="@+id/EditFullName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:ems="10"
-                android:hint="Editar nombre completo"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:layout_marginBottom="15dp"/>
-            <EditText
-                android:id="@+id/EditEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:ems="10"
-                android:hint="Editar su Email"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:layout_marginBottom="15dp"/>
+            android:layout_marginTop="25dp">
 
-            <EditText
-                android:id="@+id/EditarPassword"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="46dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_inputsesion">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    android:layout_marginLeft="15dp">
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/EditarUsuariod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:hint="Editar usuario"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="46dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_inputsesion"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_edit_note_24"
+                    android:layout_marginLeft="15dp">
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/EditarNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Editar nombre completo"
+                    android:inputType="textPersonName"
+                    android:minHeight="4dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="46dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_inputsesion"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_email_24"
+                    android:layout_marginLeft="15dp">
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/editarCorreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Editar correo"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Editar contraseña"
-                android:background="@color/white"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:layout_marginBottom="15dp"/>
-            <EditText
-                android:id="@+id/EditConfirmPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:ems="10"
-                android:hint="Confirmar contraseña"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:layout_marginBottom="30dp"/>
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_inputsesion"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_lock_24"
+                    android:layout_marginLeft="15dp">
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/editarContrasenia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Editar contraseña"
+                    android:inputType="textPersonName"
+                    android:minHeight="45dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="46dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_inputsesion"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_lock_24"
+                    android:layout_marginLeft="15dp">
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/confirmaContrasenia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Confirma contraseña"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/BtnGuardar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/BtnRegistrarse"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Guardar" />
-
-
+                android:text="GUARDAR"
+                android:background="@drawable/shape_botonregistrarse"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -175,7 +175,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:text="GUARDAR"
-                android:background="@drawable/shape_botonregistrarse"/>
+                android:background="@drawable/shape_botongeneral_marron"/>
         </LinearLayout>
     </LinearLayout>
 

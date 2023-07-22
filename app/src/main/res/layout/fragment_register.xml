@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_registrarUsuario"
     tools:context=".UI.Fragments.RegisterFragment"
     android:background="@color/register_color">
 
@@ -175,7 +176,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:text="Registrarse"
-                android:background="@drawable/shape_botonregistrarse"/>
+                android:background="@drawable/shape_botongeneral_marron"/>
 
             <Button
                 android:id="@+id/BtnIniciar"
@@ -186,7 +187,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:text="IniciarSesion"
-                android:background="@drawable/shape_botonregistrarse"/>
+                android:background="@drawable/shape_botongeneral_marron"/>
 
         </LinearLayout>
     </LinearLayout>

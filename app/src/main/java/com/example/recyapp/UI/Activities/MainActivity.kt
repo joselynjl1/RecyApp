@@ -1,9 +1,7 @@
 package com.example.recyapp.UI.Activities
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import com.example.recyapp.R
-import com.example.recyapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     
@@ -12,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
         /*
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

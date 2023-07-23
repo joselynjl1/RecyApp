@@ -1,213 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_menu"
-    tools:context=".UI.Activities.MainActivity">
+    tools:context=".UI.Activities.MainActivity"
+    android:id="@+id/container_main">
 
-    <LinearLayout
-        android:id="@+id/linearLayout_main"
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/linearmenu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginLeft="30dp"
-                android:background="@color/white"
-                android:gravity="center|left"
-                android:text="@string/main_menu"
-                android:textColor="#616161"
-                android:textSize="30sp"></TextView>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_baseline_logout_24"
-                android:layout_marginLeft="130dp"
-                android:layout_marginTop="15dp">
-
-            </ImageView>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/RLMain"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="60dp"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
+            android:id="@+id/TBMain"
+            android:background="#1B232323">
+
+            <TextView
+                android:id="@+id/TVCabeceraMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Menu Principal"
+                android:textSize="28sp">
+            </TextView>
 
-                <TextView
-                    android:id="@+id/TVUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="63dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="Usuario"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    android:textStyle="bold"></TextView>
-
-            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-            <TextView
-                android:id="@+id/TVUserPoints"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="5000"
-                android:textColor="@color/black"
-                android:textSize="30sp"></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Puntos"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
-                android:textSize="20sp"></TextView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="10dp">
-
-                    <Button
-                        android:id="@+id/BtnRecicla"
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:background="@drawable/shape_button_menu"
-                        android:text="Recicla"></Button>
-
-                    <ImageView
-                        android:id="@+id/IVRecicla"
-                        android:layout_width="140dp"
-                        android:scaleType="centerCrop"
-                        android:layout_height="100dp"
-                        android:src="@drawable/recicla">
-                    </ImageView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/IVRegistra"
-                        android:layout_width="140dp"
-                        android:scaleType="centerCrop"
-                        android:layout_height="100dp"
-                        android:src="@drawable/registra"></ImageView>
-
-                    <Button
-                        android:id="@+id/BtnRegistra"
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:background="@drawable/shape_button_menu"
-                        android:text="Registra"></Button>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/BtnCanjea"
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:text="Canjea"
-                        android:background="@drawable/shape_button_menu"></Button>
-
-                    <ImageView
-                        android:id="@+id/IVCanjea"
-                        android:layout_width="140dp"
-                        android:scaleType="centerCrop"
-                        android:layout_height="100dp"
-                        android:src="@drawable/canjea"></ImageView>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentInicio"
+            android:name="com.example.recyapp.UI.Fragments.HomeFragment"
+            tools:layout="@layout/fragment_home">
+        </androidx.fragment.app.FragmentContainerView>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/BTMNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/cardview_dark_background"
-            app:menu="@menu/bnav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
-
+            android:background="@color/black"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bnav_menu">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

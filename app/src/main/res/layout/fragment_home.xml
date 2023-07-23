@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Fragments.HomeFragment"
+    android:background="@color/main_menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="ScrollImagen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TVUsername"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Usuario"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/TVUserPoints"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="5000"
+                android:textColor="@color/black"
+                android:textSize="30sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Puntos"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:textSize="20sp"></TextView>
+
+            <!-- empieza el cardview de la imagen-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:elevation="8dp"
+                android:layout_gravity="center"
+                android:background="@color/main_menu">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/main_menu">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <ImageView
+                            android:id="@+id/IVRecicla"
+                            android:layout_width="140dp"
+                            android:scaleType="centerCrop"
+                            android:layout_height="100dp"
+                            android:src="@drawable/recicla">
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:background="@drawable/shape_buttom_menu_derecha"
+                            android:text="RECICLA"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:background="@drawable/shape_button_menu_izquierda"
+                            android:text="REGISTRA"
+                            android:gravity="center">
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/IVRegistra"
+                            android:layout_width="140dp"
+                            android:scaleType="centerCrop"
+                            android:layout_height="100dp"
+                            android:src="@drawable/registra"></ImageView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/main_menu">
+
+                        <ImageView
+                            android:id="@+id/IVCanjea"
+                            android:layout_width="140dp"
+                            android:scaleType="centerCrop"
+                            android:layout_height="100dp"
+                            android:src="@drawable/canjea">
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:background="@drawable/shape_buttom_menu_derecha"
+                            android:text="CANJEA"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

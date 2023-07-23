@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/editar_perfil"
+        android:title="Editar Perfil"
+        android:icon="@drawable/ic_baseline_edit_note_24"></item>
+    <item
+        android:id="@+id/cerrar_sesion"
+        android:title="Cerrar Sesión"
+        android:icon="@drawable/ic_baseline_logout_24">
+    </item>
+</menu>

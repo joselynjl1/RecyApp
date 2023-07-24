@@ -12,4 +12,5 @@
     <color name="register_color">#e2f59b</color>
     <color name="register_material">#F1EEE7</color>
     <color name="item_color_recycler">#F3EDF7</color>
+    <color name="botonGeneral">#3e381e</color>
 </resources>

@@ -108,7 +108,7 @@
                     android:layout_height="48dp"
                     android:ems="10"
                     android:hint="Ingrese correo"
-                    android:inputType="textPersonName"
+                    android:inputType="textEmailAddress"
                     android:minHeight="48dp"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>
@@ -135,7 +135,7 @@
                     android:layout_height="48dp"
                     android:ems="10"
                     android:hint="Ingrese contraseña"
-                    android:inputType="textPersonName"
+                    android:inputType="textPassword"
                     android:minHeight="48dp"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>
@@ -162,7 +162,7 @@
                     android:layout_height="48dp"
                     android:ems="10"
                     android:hint="Confirme contraseña"
-                    android:inputType="textPersonName"
+                    android:inputType="textPassword"
                     android:minHeight="48dp"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>
@@ -171,23 +171,23 @@
                 android:id="@+id/BtnRegistrarse"
                 android:layout_width="200dp"
                 android:layout_gravity="center"
-                android:layout_height="48dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:text="Registrarse"
-                android:background="@drawable/shape_botongeneral_marron"/>
+                android:backgroundTint="@color/botonGeneral"/>
 
             <Button
                 android:id="@+id/BtnIniciar"
                 android:layout_width="200dp"
                 android:layout_gravity="center"
-                android:layout_height="48dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="IniciarSesion"
-                android:background="@drawable/shape_botongeneral_marron"/>
+                android:text="Iniciar Sesion"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botonGeneral"/>
 
         </LinearLayout>
     </LinearLayout>

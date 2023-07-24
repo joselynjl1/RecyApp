@@ -17,20 +17,6 @@
             android:layout_height="65dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="40dp"
-                    android:text="RECOMPENSAS"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="25sp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -56,7 +42,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_recompensas">
+            tools:listitem="@layout/itemrecompensas">
         </androidx.recyclerview.widget.RecyclerView>
 
 

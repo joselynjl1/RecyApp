@@ -29,18 +29,20 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
 
         <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fragmentInicio"
             android:name="com.example.recyapp.UI.Fragments.HomeFragment"
-            tools:layout="@layout/fragment_home">
+            tools:layout="@layout/fragment_home"
+            app:navGraph="@navigation/nav_frag"
+            app:defaultNavHost="true">
         </androidx.fragment.app.FragmentContainerView>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

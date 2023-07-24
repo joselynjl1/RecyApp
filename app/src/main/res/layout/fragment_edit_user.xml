@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.Fragments.EditUserFragment"
-    android:background="@color/register_color">
+    android:background="@color/register_color"
+    tools:context=".UI.Fragments.EditUserFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,8 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical">
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            android:scrollbarSize="10dp">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -27,155 +29,150 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="46dp"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:background="@drawable/shape_inputsesion">
+                android:background="@drawable/shape_inputsesion"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_account_circle_24"
-                    android:layout_marginLeft="15dp">
-                </ImageView>
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_baseline_account_circle_24"></ImageView>
 
                 <EditText
                     android:id="@+id/EditarUsuariod"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
                     android:ems="10"
                     android:hint="Editar usuario"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="46dp"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/shape_inputsesion"
-                android:layout_marginTop="15dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_edit_note_24"
-                    android:layout_marginLeft="15dp">
-                </ImageView>
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_baseline_edit_note_24"></ImageView>
 
                 <EditText
                     android:id="@+id/EditarNombre"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
                     android:ems="10"
                     android:hint="Editar nombre completo"
                     android:inputType="textPersonName"
-                    android:minHeight="4dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:minHeight="4dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="46dp"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/shape_inputsesion"
-                android:layout_marginTop="15dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_email_24"
-                    android:layout_marginLeft="15dp">
-                </ImageView>
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_baseline_email_24"></ImageView>
 
                 <EditText
                     android:id="@+id/editarCorreo"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
                     android:ems="10"
                     android:hint="Editar correo"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/shape_inputsesion"
-                android:layout_marginTop="15dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_lock_24"
-                    android:layout_marginLeft="15dp">
-                </ImageView>
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_baseline_lock_24"></ImageView>
 
                 <EditText
                     android:id="@+id/editarContrasenia"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
                     android:ems="10"
                     android:hint="Editar contraseña"
-                    android:inputType="textPersonName"
-                    android:minHeight="45dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:inputType="textPassword"
+                    android:minHeight="45dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="46dp"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/shape_inputsesion"
-                android:layout_marginTop="15dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_lock_24"
-                    android:layout_marginLeft="15dp">
-                </ImageView>
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_baseline_lock_24"></ImageView>
 
                 <EditText
                     android:id="@+id/confirmaContrasenia"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
                     android:ems="10"
                     android:hint="Confirma contraseña"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:inputType="textPassword"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/BtnRegistrarse"
                 android:layout_width="200dp"
-                android:layout_gravity="center"
                 android:layout_height="48dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:backgroundTint="@color/botonGeneral"
                 android:text="GUARDAR"
-                android:background="@drawable/shape_botongeneral_marron"/>
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

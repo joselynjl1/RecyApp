@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -60,12 +59,13 @@
                     android:id="@+id/ETUsuarioInicioSesion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
                     android:ems="10"
+                    android:fontFamily="sans-serif-medium"
                     android:hint="Ingrese Usuario"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,35 +88,38 @@
                     android:id="@+id/ETPasswordInicioSesion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ingrese Contraseña"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="3dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:ems="10"
+                    android:fontFamily="sans-serif-medium"
+                    android:hint="Ingrese Contraseña"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/BtnIngresar"
                 android:layout_width="270dp"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:background="@drawable/shape_botongeneral_marron"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
-                android:text="Ingresar" />
+                android:backgroundTint="@color/botonGeneral"
+                android:text="Ingresar"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
             <Button
                 android:id="@+id/BtnRegistrar"
                 android:layout_width="230dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="25dp"
-                android:textStyle="bold"
-                android:background="@drawable/shape_botonsecundario_negro"
-                android:text="Registrarse" />
+                android:backgroundTint="@color/black"
+                android:text="Registrarse"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

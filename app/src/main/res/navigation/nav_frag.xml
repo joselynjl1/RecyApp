@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_frag"
+    app:startDestination="@id/NAVHomeFragment">
+
+    <fragment
+        android:id="@+id/NAVHomeFragment"
+        android:name="com.example.recyapp.UI.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_registrarMaterialFragment"
+            app:destination="@id/NAVRegistroMaterial" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NavInformacion"
+        android:name="com.example.recyapp.UI.Fragments.MaterialesReciclablesFragment"
+        android:label="fragment_materiales_reciclables"
+        tools:layout="@layout/fragment_materiales_reciclables" >
+        <action
+            android:id="@+id/action_materialesReciclablesFragment_to_mapaFragment"
+            app:destination="@id/NAVMapFragment" />
+        <action
+            android:id="@+id/action_materialesReciclablesFragment_to_materialesReciclablesDetalleDFragment"
+            app:destination="@id/materialesReciclablesDetalleDFragment" />
+    </fragment>
+    <!--    NAVMapFragment   mapaFragment-->
+    <fragment
+        android:id="@+id/NAVMapFragment"
+        android:name="com.example.recyapp.UI.Fragments.MapaFragment"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" >
+        <action
+            android:id="@+id/action_mapaFragment_to_homeFragment"
+            app:destination="@id/NAVHomeFragment" />
+        <action
+            android:id="@+id/action_mapaFragment_to_mapaDetalleDFragment"
+            app:destination="@id/mapaDetalleDFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NAVRegistroMaterial"
+        android:name="com.example.recyapp.UI.Fragments.RegistrarMaterialFragment"
+        android:label="fragment_registrar_material"
+        tools:layout="@layout/fragment_registrar_material" >
+        <action
+            android:id="@+id/action_registrarMaterialFragment_to_recompensasFragment"
+            app:destination="@id/NavRecompensas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NavRecompensas"
+        android:name="com.example.recyapp.UI.Fragments.RecompensasFragment"
+        android:label="fragment_recompensas"
+        tools:layout="@layout/fragment_recompensas" >
+        <action
+            android:id="@+id/action_recompensasFragment_to_recompensasDetalleDFragment"
+            app:destination="@id/recompensasDetalleDFragment" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/mapaDetalleDFragment"
+        android:name="com.example.recyapp.UI.Fragments.MapaDetalleDFragment"
+        android:label="fragment_mapa_detalle_d"
+        tools:layout="@layout/fragment_mapa_detalle_d" />
+    <dialog
+        android:id="@+id/recompensasDetalleDFragment"
+        android:name="com.example.recyapp.UI.Fragments.RecompensasDetalleDFragment"
+        android:label="fragment_recompensas_detalle_d"
+        tools:layout="@layout/fragment_recompensas_detalle_d" />
+    <dialog
+        android:id="@+id/materialesReciclablesDetalleDFragment"
+        android:name="com.example.recyapp.UI.Fragments.MaterialesReciclablesDetalleDFragment"
+        android:label="fragment_materiales_reciclables_detalle_d"
+        tools:layout="@layout/fragment_materiales_reciclables_detalle_d" />
+</navigation>

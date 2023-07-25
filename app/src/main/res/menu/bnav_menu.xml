@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/NavInformacion"
-        android:title="Información"
-        android:icon="@drawable/ic_baseline_info_24"></item>
-    <item
-        android:id="@+id/NAVMapFragment"
-        android:title="Mapa"
-        android:icon="@drawable/ic_baseline_map_24">
-    </item>
     <item
         android:id="@+id/NAVHomeFragment"
         android:title="Inicio"
         android:icon="@drawable/ic_baseline_home_24"/>
+
+    <item android:id="@+id/NavInformacion"
+        android:title="Información"
+        android:icon="@drawable/ic_baseline_info_24"></item>
+
     <item
         android:id="@+id/NAVRegistroMaterial"
         android:title="Registra"
@@ -23,6 +20,12 @@
         android:id="@+id/NavRecompensas"
         android:title="Recompensas"
         android:icon="@drawable/ic_baseline_reward">
+    </item>
+
+    <item
+        android:id="@+id/NAVMapFragment"
+        android:title="Mapa"
+        android:icon="@drawable/ic_baseline_map_24">
     </item>
 
 </menu>

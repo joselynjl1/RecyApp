@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fragmentInicio"
-            android:name="com.example.recyapp.UI.Fragments.HomeFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             tools:layout="@layout/fragment_home"
             app:navGraph="@navigation/nav_frag"
             app:defaultNavHost="true">

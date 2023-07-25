@@ -9,33 +9,58 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/main_menu">
+        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TBHome">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/TVUsername"
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="63dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="Usuario"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:textStyle="bold"></TextView>
+                android:layout_height="60dp"
+                android:id="@+id/TBMain"
+                android:background="#1B232323">
 
-        </androidx.appcompat.widget.Toolbar>
+                <TextView
+                    android:id="@+id/TVCabeceraHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Menu Principal"
+                    android:textStyle="bold"
+                    android:textSize="30sp">
+                </TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/TBHome"
+                android:background="@color/main_menu">
+
+                <TextView
+                    android:id="@+id/TVUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Usuario"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="ScrollImagen"
-            android:layout_marginTop="80dp">
+            android:layout_marginTop="130dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,8 +69,8 @@
 
                 <TextView
                     android:id="@+id/TVUserPoints"
-                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="5000"
@@ -66,7 +91,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="3dp"
                     android:elevation="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="center"
                     android:background="@color/main_menu">
 

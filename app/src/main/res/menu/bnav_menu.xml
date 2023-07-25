@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_baseline_info_24"></item>
 
     <item
-        android:id="@+id/NAVRegistroMaterial"
-        android:title="Registra"
-        android:icon="@drawable/ic_baseline_app_registration_24">
+        android:id="@+id/NAVMapFragment"
+        android:title="Mapa"
+        android:icon="@drawable/ic_baseline_map_24">
     </item>
 
     <item
@@ -17,15 +17,18 @@
         android:icon="@drawable/ic_baseline_home_24"/>
 
     <item
+        android:id="@+id/NAVRegistroMaterial"
+        android:title="Registra"
+        android:icon="@drawable/ic_baseline_app_registration_24">
+    </item>
+
+
+
+    <item
         android:id="@+id/NavRecompensas"
         android:title="Recompensas"
         android:icon="@drawable/ic_baseline_reward">
     </item>
 
-    <item
-        android:id="@+id/NAVMapFragment"
-        android:title="Mapa"
-        android:icon="@drawable/ic_baseline_map_24">
-    </item>
 
 </menu>

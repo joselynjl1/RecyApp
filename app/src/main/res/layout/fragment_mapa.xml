@@ -5,10 +5,33 @@
     android:layout_height="match_parent"
     tools:context=".UI.Fragments.MapaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/TBEstaciones"
+                android:background="#1B232323">
+                <TextView
+                    android:id="@+id/TVCabeceraEstaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estaciones de reciclaje"
+                    android:textStyle="bold"
+                    android:textSize="28sp">
+                </TextView>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    </LinearLayout>
 
 </FrameLayout>

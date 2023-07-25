@@ -21,12 +21,10 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
+
         val vista=inflater.inflate(R.layout.fragment_home, container, false)
+        //recupera el id del toolbar
         val toolbar: Toolbar=vista.findViewById(R.id.TBHome)
-
-        /*val activity = requireActivity() as AppCompatActivity
-        activity.setSupportActionBar(toolbar)*/
-
         val activity = activity as MainActivity?
         activity?.setSupportActionBar(toolbar)
 

@@ -5,47 +5,75 @@
     android:layout_height="match_parent"
     tools:context=".UI.Fragments.RecompensasFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="UselessParent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:orientation="horizontal">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/TBRecompensas"
+                android:background="#1B232323">
+                <TextView
+                    android:id="@+id/TVCabeceraRecompensas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recompensas"
+                    android:textStyle="bold"
+                    android:textSize="28sp">
+                </TextView>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="PUNTOS" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_gravity="center"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:text="PUNTOS" />
                 <TextView
                     android:layout_width="match_parent"
                     android:id="@+id/TVpuntosRecompensa"
                     android:layout_height="wrap_content"
-                    android:text="500 puntos">
+                    android:text="500">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/TVtextopuntos"
+                    android:layout_height="wrap_content"
+                    android:text=" puntos">
                 </TextView>
             </LinearLayout>
+
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/itemrecompensas">
+            tools:itemCount="7">
+<!--            tools:listitem="@layout/itemrecompensas">-->
         </androidx.recyclerview.widget.RecyclerView>
 
 
     </LinearLayout>
-
 </FrameLayout>

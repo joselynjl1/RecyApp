@@ -25,14 +25,17 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //boton REGISTRARSE cuando un usuario se registra correctamente
         val botonRegistroUsuario:Button=view.findViewById(R.id.BtnRegistrarse)
         botonRegistroUsuario.setOnClickListener{
             Toast.makeText(context, "Usuario Registrado", Toast.LENGTH_SHORT).show()
             //Toast
         }
 
+        //Boton que se puede usar cuando ya se registro y quiere ingresar a su sesion
         val botonDirigirInicioSesion:Button=view.findViewById(R.id.BtnIniciar)
         botonDirigirInicioSesion.setOnClickListener{
+            //redirige al login
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
         }

@@ -8,32 +8,11 @@
     tools:context=".UI.Activities.MainActivity"
     android:id="@+id/container_main">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TBMain"
-            android:background="#1B232323">
-
-            <TextView
-                android:id="@+id/TVCabeceraMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Menu Principal"
-                android:textSize="28sp">
-            </TextView>
-
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
 
         <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"

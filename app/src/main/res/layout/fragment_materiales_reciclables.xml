@@ -7,23 +7,41 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
+
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="MATERIALES RECICLABLES"
-            android:background="@color/item_color_recycler"
-            android:layout_marginBottom="30dp"
-            android:textSize="19sp"/>
-        <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="wrap_content">
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/TBMateriales"
+                    android:background="#1B232323">
+                    <TextView
+                        android:id="@+id/TVCabeceraMateriales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Materiales reciclables"
+                        android:textStyle="bold"
+                        android:textSize="28sp">
+                    </TextView>
+                </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:itemCount="5"
-            tools:listitem="@layout/item_materiales">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="5">
+<!-- falta agregar     tools:listitem="@layout/item_materiales">-->
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
 </FrameLayout>

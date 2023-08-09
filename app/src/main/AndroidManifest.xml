@@ -33,19 +33,17 @@
               android:exported="false"
           android:label="@string/title_activity_login" />
         -->
+<!--        android:theme="@style/Theme.AppCompat"-->
+<!--        android:theme="@style/Theme.App.SplashTheme"-->
         <activity
-            android:name=".UI.Activities.LoginActivity"
+            android:name=".LoginActivity"
             android:theme="@style/Theme.App.SplashTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
     </application>
 

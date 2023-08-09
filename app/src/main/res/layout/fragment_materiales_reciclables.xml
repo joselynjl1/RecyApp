@@ -32,13 +32,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="53dp">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVMateriales"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:itemCount="5">
-<!-- falta agregar     tools:listitem="@layout/item_materiales">-->
+                android:backgroundTint="@color/main_menu">
+                <!-- falta agregar     tools:listitem="@layout/itemmateriales">-->
             </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>

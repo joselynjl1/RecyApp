@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.recyapp.LoginActivity
 import com.example.recyapp.R
 import com.example.recyapp.UI.Fragments.EditUserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,13 +19,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        configurarNavegacion()
+
+    }
+
+    fun configurarNavegacion(){
         //NAVEGACION DE LA APP
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentInicio) as NavHostFragment
         val navController = navHostFragment.navController
         // Configurar el BottomNavigationView para que refleje la navegación
         val bottomNavView = findViewById<BottomNavigationView>(R.id.BTMNavigation)
         bottomNavView.setupWithNavController(navController)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".UI.Fragments.MaterialesReciclablesDetalleDFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="#UNSTeCapacita | La Universidad Nacional del Santa (UNS) anuncia la realización del I Congreso Internacional de Ingeniería, Sociedad y Desarrollo Sostenible.">
+    </TextView>
 
 </FrameLayout>

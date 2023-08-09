@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "698777429299",
+    "project_id": "recyappp1",
+    "storage_bucket": "recyappp1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698777429299:android:7f1165273df766fb414a46",
+        "android_client_info": {
+          "package_name": "com.example.recyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698777429299-3ogclbbjhmpm4ocn1r6son8s9afc7nuu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.recyapp",
+            "certificate_hash": "bbdbe3cdba04abc09c8a86665b12751b7fd3038f"
+          }
+        },
+        {
+          "client_id": "698777429299-joft55spkkujsbb8udfdmmvf29u492q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs9R0Uh-xP0c9Jb3PCQEggJz2lKE1YXKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698777429299-joft55spkkujsbb8udfdmmvf29u492q2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

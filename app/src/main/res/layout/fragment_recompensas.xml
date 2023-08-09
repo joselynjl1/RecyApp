@@ -11,7 +11,6 @@
         android:orientation="vertical"
         tools:ignore="UselessParent">
 
-
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -35,32 +34,37 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="right"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="18sp"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:text="PUNTOS" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_materialescard">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:id="@+id/TVpuntosRecompensa"
-                    android:layout_height="wrap_content"
-                    android:text="500">
-                </TextView>
+                    android:id="@+id/TVtotalptRecompensa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="15dp"
+                    android:text="500"></TextView>
                 <TextView
                     android:layout_width="match_parent"
-                    android:id="@+id/TVtextopuntos"
                     android:layout_height="wrap_content"
+                    android:textSize="17sp"
                     android:text=" puntos">
                 </TextView>
             </LinearLayout>
@@ -68,9 +72,10 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVrecompensas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:itemCount="7">
+            android:layout_marginBottom="55dp">
 <!--            tools:listitem="@layout/itemrecompensas">-->
         </androidx.recyclerview.widget.RecyclerView>
 

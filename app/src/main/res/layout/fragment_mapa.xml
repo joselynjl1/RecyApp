@@ -29,7 +29,12 @@
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
-
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mapaEstaciones"
+            android:name="com.google.android.gms.maps.SupportMapFragment">
+        </fragment>
 
 
     </LinearLayout>

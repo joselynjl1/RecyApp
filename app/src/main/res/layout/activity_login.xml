@@ -25,11 +25,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/splash_color"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="BIENVENIDO"
+                android:text="@string/login_bnvda"
                 android:textColor="@color/black"
                 android:textSize="35sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold">
+            </TextView>
 
         </LinearLayout>
 
@@ -52,18 +54,20 @@
                     android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_baseline_account_box_24"
-                    android:layout_marginLeft="15dp">
+                    android:contentDescription="@string/cdescivlogin"
+                    android:layout_marginStart="15dp">
                 </ImageView>
 
                 <EditText
                     android:id="@+id/ETUsuarioInicioSesion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginBottom="3dp"
                     android:ems="10"
+                    android:autofillHints="name"
                     android:fontFamily="sans-serif-medium"
-                    android:hint="Ingrese Usuario"
+                    android:hint="@string/hintUsuario"
                     android:inputType="textPersonName"
                     android:minHeight="48dp" />
             </LinearLayout>
@@ -80,19 +84,21 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
+                    android:contentDescription="@string/cdesccandado"
                     android:src="@drawable/ic_baseline_lock_24"
-                    android:layout_marginLeft="15dp">
+                    android:layout_marginStart="15dp">
                 </ImageView>
 
                 <EditText
                     android:id="@+id/ETPasswordInicioSesion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginBottom="3dp"
                     android:ems="10"
                     android:fontFamily="sans-serif-medium"
-                    android:hint="Ingrese Contraseña"
+                    android:autofillHints="password"
+                    android:hint="@string/hintContrasenia"
                     android:inputType="textPassword"
                     android:minHeight="48dp" />
             </LinearLayout>
@@ -105,7 +111,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/botonGeneral"
-                android:text="Ingresar"
+                android:text="@string/btnIngresar"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 
@@ -116,7 +122,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="25dp"
                 android:backgroundTint="@color/black"
-                android:text="Registrarse"
+                android:text="@string/btnRegistrarse"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>

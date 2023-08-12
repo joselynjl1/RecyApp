@@ -18,6 +18,4 @@ class MaterialesViewModel:ViewModel() {
         }
         return mutableList
     }
-
-
 }

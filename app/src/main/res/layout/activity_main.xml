@@ -32,7 +32,8 @@
             android:background="@color/black"
             app:itemIconTint="@color/white"
             app:itemTextColor="@color/white"
-            app:menu="@menu/bnav_menu">
+            app:menu="@menu/bnav_menu"
+            tools:ignore="VisualLintBottomNav">
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </RelativeLayout>
 

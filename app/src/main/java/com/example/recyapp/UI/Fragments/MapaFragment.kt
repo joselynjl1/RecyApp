@@ -34,13 +34,25 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
 
     }
 
-    override fun onMapReady(googleMap: GoogleMap) {
-        val ubicacion= LatLng(-9.126987719526605, -78.52198645412764)
-        googleMap.addMarker(
-            MarkerOptions()
-                .position(ubicacion)
-                .title("Punto de recolección"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,16f))
+     override fun onMapReady(googleMap: GoogleMap) {
+        val ubicaciones = listOf(
+            LatLng(-9.126987719526605, -78.52198645412764),//MUNICIPALIDAD
+            LatLng(-9.121935499089318, -78.5311197894472)//PLAZA MAYOR
+        )
+
+        for (ubicacion in ubicaciones) {
+            googleMap.addMarker(
+                MarkerOptions()
+                    .position(ubicacion)
+                    .title("Punto de recolección")
+            )
+        }
+
+        // Mueve la cámara al primer marcador
+        if (ubicaciones.isNotEmpty()) {
+            val primeraUbicacion = ubicaciones[0]
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(primeraUbicacion, 16f))
+        }
 
         googleMap.uiSettings.isZoomControlsEnabled = true
 

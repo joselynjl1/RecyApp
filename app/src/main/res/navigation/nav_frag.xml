@@ -5,7 +5,6 @@
     android:id="@+id/nav_frag"
     app:startDestination="@id/NAVHomeFragment">
 
-
     <fragment
         android:id="@+id/NAVHomeFragment"
         android:name="com.example.recyapp.UI.Fragments.HomeFragment"
@@ -24,9 +23,6 @@
         <action
             android:id="@+id/action_NavInformacion_to_NAVRegistroMaterial"
             app:destination="@id/NAVRegistroMaterial" />
-        <action
-            android:id="@+id/action_NavInformacion_to_materialesReciclablesDetalleDFragment"
-            app:destination="@id/materialesReciclablesDetalleDFragment" />
     </fragment>
 
     <fragment
@@ -47,9 +43,6 @@
         <action
             android:id="@+id/action_NavRecompensas_to_NAVMapFragment"
             app:destination="@id/NAVMapFragment" />
-        <action
-            android:id="@+id/action_NavRecompensas_to_recompensasDetalleDFragment"
-            app:destination="@id/recompensasDetalleDFragment" />
     </fragment>
 
     <fragment
@@ -57,23 +50,5 @@
         android:name="com.example.recyapp.UI.Fragments.MapaFragment"
         android:label="fragment_mapa"
         tools:layout="@layout/fragment_mapa" >
-        <action
-            android:id="@+id/action_NAVMapFragment_to_mapaDetalleDFragment"
-            app:destination="@id/mapaDetalleDFragment" />
     </fragment>
-    <dialog
-        android:id="@+id/materialesReciclablesDetalleDFragment"
-        android:name="com.example.recyapp.UI.Fragments.MaterialesReciclablesDetalleDFragment"
-        android:label="fragment_materiales_reciclables_detalle_d"
-        tools:layout="@layout/fragment_materiales_reciclables_detalle_d" />
-    <dialog
-        android:id="@+id/recompensasDetalleDFragment"
-        android:name="com.example.recyapp.UI.Fragments.RecompensasDetalleDFragment"
-        android:label="fragment_recompensas_detalle_d"
-        tools:layout="@layout/fragment_recompensas_detalle_d" />
-    <dialog
-        android:id="@+id/mapaDetalleDFragment"
-        android:name="com.example.recyapp.UI.Fragments.MapaDetalleDFragment"
-        android:label="fragment_mapa_detalle_d"
-        tools:layout="@layout/fragment_mapa_detalle_d" />
 </navigation>

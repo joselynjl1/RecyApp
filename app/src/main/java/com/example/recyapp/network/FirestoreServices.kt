@@ -11,7 +11,6 @@ const val RECOMPENSAS_COLLECTION_NAMES="Recompensas"
 
 class FirestoreServices {
 
-
     private val firebaseFirestore: FirebaseFirestore= FirebaseFirestore.getInstance()
 
     //obtener materiales de bd
@@ -31,7 +30,7 @@ class FirestoreServices {
         return mutableList
     }
 
-    //obtener recopensas de bd
+    //obtener recompensas de bd
     fun getRecompensasFirestore(): LiveData<MutableList<Recompensas>>{
         val mutableList=MutableLiveData<MutableList<Recompensas>>()
         val recompensas= mutableListOf<Recompensas>()
@@ -64,7 +63,5 @@ class FirestoreServices {
         }
         return mutableLiveData
     }
-
-
 
 }

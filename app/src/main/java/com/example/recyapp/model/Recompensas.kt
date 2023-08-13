@@ -5,3 +5,4 @@ class Recompensas {
     var valorRecompensa=0
     var imagenurlRecompensa=""
 }
+

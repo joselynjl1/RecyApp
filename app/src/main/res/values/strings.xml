@@ -9,5 +9,10 @@
     <string name="btnIngresar">Ingresar</string>
     <string name="btnRegistrarse">Registrarse</string>
 
+    <string name="aceptar">Aceptar</string>
+
+    <string name="cancelar">Cancelar</string>
+
+    <string name="textConfirmarRecompensa">Tu recompensa llegará en un rango de 1 a 2 días</string>
 
 </resources>

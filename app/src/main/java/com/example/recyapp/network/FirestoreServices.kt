@@ -48,6 +48,23 @@ class FirestoreServices {
         return mutableList
     }
 
+    //obtener solo 1 material de la bd
+    fun getMaterial(valor: Int): MutableLiveData<Materiales>{
+        var materialSeleccionado = Materiales()
+        val mutableLiveData = MutableLiveData<Materiales>()
+        firebaseFirestore.collection(MATERIALES_COLLECTION_NAMES).get().addOnSuccessListener {
+            if (!it.isEmpty){
+                for(data in it.documents){
+                    if(data.toObject(Materiales::class.java)!!.valorMaterial == valor){
+                        materialSeleccionado = data.toObject(Materiales::class.java)!!
+                    }
+                }
+            }
+            mutableLiveData.value = materialSeleccionado
+        }
+        return mutableLiveData
+    }
+
 
 
 }

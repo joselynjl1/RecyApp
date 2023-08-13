@@ -79,7 +79,7 @@
                 android:textSize="18sp"></TextView>
 
             <EditText
-                android:id="@+id/ETUsuario"
+                android:id="@+id/ETIngresarPeso"
                 android:layout_width="250dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
@@ -96,7 +96,7 @@
                 android:textSize="18sp"></TextView>
 
             <EditText
-                android:id="@+id/ETFullName"
+                android:id="@+id/ETPuntos"
                 android:layout_width="250dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
@@ -106,6 +106,17 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:background="@drawable/shape_inputregistrar"/>
+
+            <Button
+                android:id="@+id/BtnCalcular"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                android:text="Calcular"
+                android:backgroundTint="@color/botonGeneral"/>
 
             <Button
                 android:id="@+id/BtnEnviar"

@@ -15,4 +15,6 @@
 
     <string name="textConfirmarRecompensa">Tu recompensa llegará en un rango de 1 a 2 días</string>
 
+    <string name="mensajeEspera">El administrador confirmara su registro para la asignación de puntos, tenga buen día!</string>
+
 </resources>

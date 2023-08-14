@@ -62,6 +62,7 @@
                     android:layout_marginLeft="15dp"
                     android:text="500"></TextView>
                 <TextView
+                    android:id="@+id/TVTextoPuntosRecompensa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="17sp"
@@ -71,14 +72,19 @@
 
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RVrecompensas"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="55dp">
-<!--            tools:listitem="@layout/itemrecompensas">-->
-        </androidx.recyclerview.widget.RecyclerView>
-
+            android:id="@+id/SRLayout"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVrecompensas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="55dp">
+                <!--            tools:listitem="@layout/itemrecompensas">-->
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </LinearLayout>
 </FrameLayout>

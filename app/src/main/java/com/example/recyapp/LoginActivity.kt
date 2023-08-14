@@ -37,22 +37,24 @@ class LoginActivity : AppCompatActivity() {
         installSplashScreen()
         setContentView(R.layout.activity_login)
 
-        val botonIngresar: Button =findViewById(R.id.BtnIngresar)
-        botonIngresar.setOnClickListener{
-            loguearse()
-        }
-
         email=findViewById(R.id.ETCorreoInicioSesion)
         clave=findViewById(R.id.ETPasswordInicioSesion)
 
         auth=FirebaseAuth.getInstance()
 
+        val botonIngresar: Button =findViewById(R.id.BtnIngresar)
+        botonIngresar.setOnClickListener{
+            loguearse()
+        }
+
+
+
         sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
 
         Toast.makeText(this, "Iniciando Sesion", Toast.LENGTH_SHORT).show()
         auth = FirebaseAuth.getInstance()
-        val user: FirebaseUser? = auth.currentUser
-        saveAuthToken(user!!.uid)
+        //val user: FirebaseUser? = auth.currentUser
+        //saveAuthToken(user!!.uid)
 
         val botonRegistrase=findViewById<Button>(R.id.BtnRegistrar)
         botonRegistrase.setOnClickListener{
@@ -75,6 +77,8 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) {
                         task ->
                     if (task.isSuccessful) {
+                        val user: FirebaseUser? = auth.currentUser
+                        saveAuthToken(user!!.uid)
                         action()
                     } else {
                         Toast.makeText(this,"Error al ingresar", Toast.LENGTH_LONG).show()

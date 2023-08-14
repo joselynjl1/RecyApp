@@ -4,10 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.recyapp.model.Materiales
 import com.example.recyapp.model.Recompensas
+import com.example.recyapp.model.Usuario
 import com.google.firebase.firestore.FirebaseFirestore
 
 const val MATERIALES_COLLECTION_NAMES="Materiales"
 const val RECOMPENSAS_COLLECTION_NAMES="Recompensas"
+const val USUARIOS_COLLECTION_NAME = "Usuarios"
 
 class FirestoreServices {
 
@@ -62,6 +64,36 @@ class FirestoreServices {
             mutableLiveData.value = materialSeleccionado
         }
         return mutableLiveData
+    }
+
+    fun getUserById(id: String): MutableLiveData<Usuario> {
+        val mutableLiveDataUser = MutableLiveData<Usuario>()
+        firebaseFirestore.collection(USUARIOS_COLLECTION_NAME)
+            .document(id)
+            .get()
+            .addOnSuccessListener {
+                mutableLiveDataUser.value = it.toObject(Usuario::class.java)
+            }
+
+        return mutableLiveDataUser
+    }
+
+    fun updatePoints(points: Int, currentUserId: String): MutableLiveData<Usuario>{
+        val mutableLiveDataUser = MutableLiveData<Usuario>()
+        val updateData = mapOf(
+            "puntos" to points
+        )
+        firebaseFirestore.collection(USUARIOS_COLLECTION_NAME)
+            .document(currentUserId)
+            .update(updateData)
+            .addOnSuccessListener {
+                getUserById(currentUserId).observeForever {
+                    mutableLiveDataUser.value = it
+                }
+            }
+
+        return mutableLiveDataUser
+
     }
 
 }

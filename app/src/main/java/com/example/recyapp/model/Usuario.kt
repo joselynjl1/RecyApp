@@ -5,5 +5,5 @@ class Usuario {
     lateinit var nombrecompleto: String
     lateinit var contrasenia: String
     lateinit var correo: String
-    var puntos: Int = 3000
+    var puntos: Int = 0
 }

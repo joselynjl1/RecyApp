@@ -82,10 +82,10 @@ class RegisterFragment : Fragment() {
 
                         val database = FirebaseFirestore.getInstance()
                         val cuenta = Usuario()
-                        cuenta.usuario = correo
-                        cuenta.correo = contrasenia
+                        cuenta.usuario = usuario
+                        cuenta.correo = correo
                         cuenta.nombrecompleto = nombrecompleto
-                        cuenta.contrasenia = usuario
+                        cuenta.contrasenia = contrasenia
                         cuenta.puntos = 0;
                         database.collection("Usuario").document(uid).set(cuenta)
                         action()

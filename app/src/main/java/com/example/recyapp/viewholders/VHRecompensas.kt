@@ -10,35 +10,41 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.recyapp.R
 import com.example.recyapp.model.Materiales
 import com.example.recyapp.model.Recompensas
 import com.example.recyapp.model.Usuario
+import com.example.recyapp.network.FirestoreServices
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
-class VHRecompensas(view: View): RecyclerView.ViewHolder(view) {
+class VHRecompensas(view: View, var user: MutableLiveData<Usuario>): RecyclerView.ViewHolder(view) {
     val nombreRecompensa=view.findViewById<TextView>(R.id.TVnombreRecompensa)
     val valorRecompensa=view.findViewById<TextView>(R.id.TVvalorRecompensa)
     val imagenurl=view.findViewById<ImageView>(R.id.IVImagenRecompensa)
     val btnCanjeo = view.findViewById<Button>(R.id.BtnCanjear)
+    val firestoreServices = FirestoreServices()
+    private lateinit var auth: FirebaseAuth
 
-    fun render(recompensas: Recompensas){
-        val user = Usuario()
-        user.nombrecompleto = "Mirko"
-        user.puntos = 3000
+    fun render(recompensa: Recompensas){
 
-        nombreRecompensa.text=recompensas.nombreRecompensa
-        valorRecompensa.text=recompensas.valorRecompensa.toString()
-        Glide.with(imagenurl.context).load(recompensas.imagenurlRecompensa).into(imagenurl)
+        nombreRecompensa.text=recompensa.nombreRecompensa
+        valorRecompensa.text=recompensa.valorRecompensa.toString()
+        Glide.with(imagenurl.context).load(recompensa.imagenurlRecompensa).into(imagenurl)
 
-        if(user.puntos < recompensas.valorRecompensa){
-            btnCanjeo.isVisible = false
+        user.observeForever {
+            if(user.value!!.puntos < recompensa.valorRecompensa){
+                btnCanjeo.isVisible = false
+            }
         }
 
         btnCanjeo.setOnClickListener {
-            showConfirmDialog("¿Desea confirmar el canjeo?", user, recompensas)
+            showConfirmDialog("¿Desea confirmar el canjeo?", user.value!!, recompensa)
         }
+
     }
 
     fun showConfirmDialog(message:String, user: Usuario, recompensa: Recompensas){
@@ -52,14 +58,16 @@ class VHRecompensas(view: View): RecyclerView.ViewHolder(view) {
         val btnCancelar = confirmDialog.findViewById<Button>(R.id.btnCancelar)
 
         btnAceptar.setOnClickListener {
-
-            user.puntos = user.puntos - recompensa.valorRecompensa
-
-            Toast.makeText(btnAceptar.context,
-                "Genial ${user.nombrecompleto}! ${btnAceptar.context.resources.getString(R.string.textConfirmarRecompensa)}. Ahora tu puntaje es: ${user.puntos}",
-                Toast.LENGTH_SHORT)
-                .show()
-            confirmDialog.dismiss()
+            val userAuth: FirebaseUser? = auth.currentUser
+            firestoreServices
+                .updatePoints(user.puntos - recompensa.valorRecompensa, userAuth!!.uid)
+                .observeForever {
+                    Toast.makeText(btnAceptar.context,
+                        "Ahora tu puntaje es: ${it.puntos}",
+                        Toast.LENGTH_SHORT)
+                        .show()
+                    confirmDialog.dismiss()
+                }
         }
 
         btnCancelar.setOnClickListener {

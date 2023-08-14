@@ -41,10 +41,6 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
         return when (item.itemId) {
-            R.id.editar_perfil -> {
-                cambiarFragmentEditar(fragment = EditUserFragment())
-                true
-            }
             R.id.cerrar_sesion -> {
                 val intent= Intent(this, LoginActivity::class.java)
                 startActivity(intent)

@@ -4,7 +4,7 @@
     <string name="login_bnvda">BIENVENIDO</string>
     <string name="cdescivlogin">ivusuario</string>
     <string name="cdesccandado">ivcandado</string>
-    <string name="hintUsuario">Ingrese Usuario</string>
+    <string name="hintUsuario">Ingrese Correo</string>
     <string name="hintContrasenia">Ingrese Contraseña</string>
     <string name="btnIngresar">Ingresar</string>
     <string name="btnRegistrarse">Registrarse</string>

@@ -24,7 +24,7 @@ class RegisterFragment : Fragment() {
     private lateinit var txtusuario: EditText
     private lateinit var txtcorreo: EditText
     private lateinit var txtcontraenia: EditText
-    //var firestoreServices = FirestoreServices()
+    private lateinit var txtConfirmarcontrasenia: EditText
 
     private lateinit var database: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
@@ -32,18 +32,6 @@ class RegisterFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*
-        edit_email = findViewById(R.id.email)
-        edit_clave = findViewById(R.id.clave)
-        edit_nombres = findViewById(R.id.nombresET)
-        edit_apellidos = findViewById(R.id.apellidosET)
-        edit_dni = findViewById(R.id.dniET)
-        auth = FirebaseAuth.getInstance()
-        boton_registro = findViewById(R.id.btn_registro)
-        boton_registro.setOnClickListener {
-            crearCuenta()
-        }
-         */
 
     }
 
@@ -54,8 +42,10 @@ class RegisterFragment : Fragment() {
         txtcorreo=view.findViewById(R.id.ETemail)
         txtusuario=view.findViewById(R.id.ETUsuario)
         txtcontraenia=view.findViewById(R.id.ETPassword)
+        txtConfirmarcontrasenia=view.findViewById(R.id.ETConfirmPassword)
         auth = FirebaseAuth.getInstance()
         boton_registro = view.findViewById(R.id.BtnRegistrarse)
+
         boton_registro.setOnClickListener {
             registrarCuenta()
         }
@@ -69,6 +59,7 @@ class RegisterFragment : Fragment() {
         val nombrecompleto=txtnombres.text.toString()
         val contrasenia=txtcontraenia.text.toString()
         val correo=txtcorreo.text.toString()
+        val confirmarcontrasenia=txtConfirmarcontrasenia.text.toString()
 
         if (!TextUtils.isEmpty(correo)
             && !TextUtils.isEmpty(contrasenia)) {
@@ -82,13 +73,19 @@ class RegisterFragment : Fragment() {
 
                         val database = FirebaseFirestore.getInstance()
                         val cuenta = Usuario()
-                        cuenta.usuario = usuario
-                        cuenta.correo = correo
-                        cuenta.nombrecompleto = nombrecompleto
-                        cuenta.contrasenia = contrasenia
-                        cuenta.puntos = 0;
-                        database.collection("Usuario").document(uid).set(cuenta)
-                        action()
+                        if (contrasenia.equals(confirmarcontrasenia)){
+                            cuenta.correo = correo
+                            cuenta.contrasenia = contrasenia
+                            cuenta.nombrecompleto = nombrecompleto
+                            cuenta.usuario = usuario
+                            cuenta.puntos = 0;
+                            database.collection("Usuario").document(uid).set(cuenta)
+                            action()
+                        }else{
+                            val toast = Toast.makeText(context, "Verifique datos", Toast.LENGTH_SHORT)
+                            toast.show()
+                        }
+
                     }
                 }
         }

@@ -59,7 +59,7 @@
                 </ImageView>
 
                 <EditText
-                    android:id="@+id/ETUsuarioInicioSesion"
+                    android:id="@+id/ETCorreoInicioSesion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"

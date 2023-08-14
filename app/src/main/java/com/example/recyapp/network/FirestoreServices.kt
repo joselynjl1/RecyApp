@@ -9,7 +9,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 const val MATERIALES_COLLECTION_NAMES="Materiales"
 const val RECOMPENSAS_COLLECTION_NAMES="Recompensas"
-const val USUARIOS_COLLECTION_NAME = "Usuarios"
+const val USUARIOS_COLLECTION_NAME = "Usuario"
 
 class FirestoreServices {
 

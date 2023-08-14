@@ -27,7 +27,7 @@ class VHRecompensas(view: View, var user: MutableLiveData<Usuario>): RecyclerVie
     val imagenurl=view.findViewById<ImageView>(R.id.IVImagenRecompensa)
     val btnCanjeo = view.findViewById<Button>(R.id.BtnCanjear)
     val firestoreServices = FirestoreServices()
-    private lateinit var auth: FirebaseAuth
+    var auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     fun render(recompensa: Recompensas){
 

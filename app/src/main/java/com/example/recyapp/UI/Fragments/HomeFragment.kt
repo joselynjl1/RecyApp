@@ -13,6 +13,7 @@ import com.example.recyapp.R
 import com.example.recyapp.UI.Activities.MainActivity
 import com.example.recyapp.viewmodel.RecompensasViewModel
 import kotlinx.android.synthetic.main.fragment_home.TVUserPoints
+import kotlinx.android.synthetic.main.fragment_home.TVUsername
 import kotlinx.android.synthetic.main.fragment_home.TVtextopuntos
 import org.w3c.dom.Text
 
@@ -50,9 +51,10 @@ class HomeFragment : Fragment() {
         val tvTextoPuntos = view.findViewById<TextView>(R.id.TVtextopuntos)
 
         viewModel.getCurrentUserToRecompensas().observe(viewLifecycleOwner) {
-            Log.i("HomeFragment", it.nombrecompleto)
-            //TVUserPoints.text = it.puntos.toString()
-            //TVtextopuntos.isVisible = true
+            Log.d("HomeFragment", it.nombrecompleto)
+            TVUsername.text = it.nombrecompleto
+            TVUserPoints.text = it.puntos.toString()
+            TVtextopuntos.isVisible = true
         }
     }
 

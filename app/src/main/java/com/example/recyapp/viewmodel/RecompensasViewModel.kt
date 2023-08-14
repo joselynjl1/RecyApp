@@ -25,8 +25,9 @@ class RecompensasViewModel: ViewModel() {
     fun getCurrentUserToRecompensas(): MutableLiveData<Usuario>{
         val mutableLiveData = MutableLiveData<Usuario>()
         val userAuth: FirebaseUser? = auth.currentUser
-        Log.i("Userauth", userAuth!!.uid)
-        servicesFire.getUserById(userAuth.uid).observeForever {
+        Log.d("Userauth", userAuth!!.uid)
+        servicesFire.getUserById(userAuth!!.uid).observeForever {
+            Log.d("UserCorreo", it.correo)
             mutableLiveData.value = it
         }
         return mutableLiveData

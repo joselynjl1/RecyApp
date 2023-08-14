@@ -47,7 +47,7 @@
                 android:textSize="14sp"
                 android:text="Aceptar"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/splash_color"
+                android:backgroundTint="@color/main_menu"
                 android:layout_margin="5dp" />
 
         </LinearLayout>
